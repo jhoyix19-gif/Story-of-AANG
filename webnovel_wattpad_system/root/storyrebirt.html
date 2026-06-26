@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AVATAR: The Last Air Bender</title>
+<link rel="stylesheet" href="css/story.css">
+
+</head>
+
+<body>
+    <div class="hero-banner">
+
+        <div class="hero-bg"></div>
+    
+        <div class="hero-content">
+    
+            <img src="images/28.jpg" class="hero-cover" id="cover">
+    
+            <h1>AVATAR: The Last Air Bender</h1>
+    
+            <p>
+                "Water. Earth. Fire. Air.
+                Long ago
+            </p>
+    
+        </div>
+    
+    </div>
+<div class="reader">
+
+<div class="sidebar">
+<h3>📚 Chapters</h3>
+<div id="list"></div>
+</div>
+
+<div class="main">
+
+<a class="back" href="library.html">⬅ Back to Library</a>
+
+<h1>📖 AVATAR: The Last Air Bender</h1>
+
+<div class="chapter-box" id="content"></div>
+
+<div>
+<button onclick="prev()">⬅ Prev</button>
+<button onclick="next()">Next ➡</button>
+</div>
+
+</div>
+</div>
+
+<script>
+
+const chapters = [
+
+{
+title: "Chapter 1 - The Last Air Walker",
+content: `
+For centuries, the Four Kingdoms lived in peace under the protection of the Elemental Guardians. The Kingdom of Air floated high above the clouds, untouched by war, while the Earth Clans, Water Tribes, and Fire Empire prospered below. That peace ended when a mysterious force known as the Shadow Eclipse began spreading darkness across the world.
+
+A sixteen-year-old boy named Airo lived in the floating city of Zephyr. Unlike the other students, Airo was curious about the lands beyond the clouds. He dreamed of becoming an explorer instead of spending his life inside the monastery.
+
+One evening, while practicing with his wooden glider, Airo noticed a brilliant blue comet falling into the mountains. Ignoring the warnings of the elders, he followed the strange light.
+
+Deep inside an ancient temple, he discovered a crystal surrounded by symbols representing Air, Water, Earth, and Fire. The moment he touched it, the temple trembled.
+
+A powerful voice echoed through the chamber.
+
+"The balance has been broken. A new guardian must rise."
+
+Blue energy surrounded Airo, and glowing marks appeared across his arms. Before he could ask what was happening, the crystal shattered into four pieces that flew toward the four kingdoms.
+
+When Airo returned home, the elders immediately recognized the ancient markings. They revealed that he had become the chosen Guardian of the Four Elements.
+
+His peaceful life was over.
+
+Tomorrow, he would leave the floating islands and begin a journey that would decide the fate of the entire world.
+`
+},
+
+{
+title: "Chapter 2 - The Spirit Compass",
+content: `
+The next morning, Elder Raizen handed Airo an old bronze compass that had belonged to the First Guardian. Unlike an ordinary compass, its needle pointed toward spiritual energy instead of north.
+
+Raizen explained that the crystal had been divided into four Elemental Shards. Each shard rested in one of the Four Kingdoms, protected by powerful guardians.
+
+"If the Shadow Eclipse finds the shards first," Raizen warned, "the world will fall into endless darkness."
+
+Airo packed only a small bag, his glider, and the Spirit Compass before leaving his home. It was the first time he had ever seen the world below the clouds.
+
+As he reached the coast, he encountered a young water healer named Mira. She had been protecting villagers from strange shadow creatures that appeared every night.
+
+Although she doubted Airo's story, she witnessed him create a powerful wind barrier that saved several children from danger.
+
+Realizing he truly carried the blessing of the Four Spirits, Mira agreed to travel with him.
+
+Together they followed the Spirit Compass toward the distant Water Kingdom, unaware that someone had already begun hunting them.
+`
+},
+
+{
+title: "Chapter 3 - The Water Kingdom",
+content: `
+After several days of traveling across the sea, Airo and Mira finally reached the Water Kingdom. Towering walls of blue ice surrounded the capital, while enormous waterfalls flowed from the mountains into crystal-clear rivers. The kingdom was beautiful, but something felt wrong.
+
+The streets were unusually quiet. Guards stood watch on every corner, and many homes had their doors locked. Citizens whispered about mysterious disappearances that had taken place over the past month.
+
+King Aldren welcomed the travelers after hearing about Airo's glowing markings. He explained that one of the Four Elemental Shards was hidden beneath the Temple of Tides. Unfortunately, shadow creatures had already begun searching for it.
+
+That night, the kingdom was attacked.
+
+Dark monsters emerged from the ocean, their glowing red eyes piercing through the thick fog. Panic spread as soldiers fought to defend the city.
+
+Without hesitation, Airo jumped into battle. Using powerful gusts of wind, he pushed the creatures away from the walls while Mira used water bending to freeze them in place.
+
+The battle lasted until sunrise.
+
+Although the kingdom survived, Airo realized the Shadow Eclipse was growing stronger every day.
+
+The king entrusted him with the Water Shard, warning that the remaining shards must be found before the enemy reached them.
+
+With a heavier responsibility than ever before, Airo and Mira continued their journey toward the Earth Kingdom.
+`
+},
+
+{
+title: "Chapter 4 - The Stone Guardian",
+content: `
+The Earth Kingdom was unlike anything Airo had ever seen. Massive mountains surrounded ancient cities carved directly into stone cliffs.
+
+Their destination was Guardian Peak, home of Terra, the legendary protector of the Earth Shard.
+
+Terra was known across the kingdoms as the strongest earth warrior alive. She believed strength was earned, not given.
+
+When Airo asked for her help, she refused.
+
+"If you wish to protect the world," Terra said, "prove that you deserve the power."
+
+She challenged Airo to complete three trials.
+
+The first trial tested courage. Airo crossed a collapsing bridge while powerful winds threatened to throw him into the canyon below.
+
+The second trial tested wisdom. Inside an ancient maze, he solved puzzles left behind by the First Guardians instead of using force.
+
+The final trial tested compassion.
+
+A terrible earthquake struck a nearby village. Instead of finishing the trial, Airo rushed to save the trapped villagers.
+
+Terra smiled.
+
+"You chose people over power. That is what makes a true guardian."
+
+Impressed by his selflessness, Terra handed him the Earth Shard and agreed to join the journey.
+
+The team had grown stronger, but they all sensed that an even greater danger was waiting ahead.
+`
+},
+
+{
+title: "Chapter 5 - Flames of Destiny",
+content: `
+The Spirit Compass pointed toward the Fire Empire, a nation famous for its powerful warriors and advanced cities.
+
+Upon arriving, Airo's group learned that the empire was preparing for war.
+
+Prince Kael, commander of the Imperial Army, believed Airo was a spy.
+
+Without listening to explanations, Kael challenged him to a duel before the royal court.
+
+The arena erupted as fire and wind collided.
+
+Kael's blazing attacks forced Airo to stay on the defensive. Every strike became stronger than the last.
+
+Finally, Airo used a powerful cyclone that lifted both fighters into the air before gently placing them back on the ground without causing harm.
+
+The crowd fell silent.
+
+Kael realized Airo had won the battle while refusing to hurt his opponent.
+
+Respect replaced suspicion.
+
+The prince revealed a terrible secret.
+
+Someone inside the Fire Empire had stolen the Fire Shard and secretly served the Shadow Eclipse.
+
+If the shard could not be recovered, the empire itself would fall.
+
+Airo, Mira, Terra, and Kael formed an alliance.
+
+For the first time, the four heroes stood together as one team.
+
+Far away, hidden inside a dark fortress, the mysterious Shadow King watched them through a mirror of black crystal.
+
+He smiled.
+
+"The Guardians have finally gathered."
+
+The true war was about to begin.
+`
+},
+
+{
+title: "Chapter 6 - The Lost Spirit Temple",
+content: `
+The Spirit Compass glowed brighter than ever as the four heroes entered the Whispering Forest. Ancient trees stretched high into the sky, their branches blocking the sunlight. Every step echoed through the silent woods.
+
+According to Prince Kael, the forgotten Spirit Temple rested somewhere inside the forest. Legends claimed it was built by the First Guardian thousands of years ago.
+
+After hours of walking, the group finally discovered massive stone gates covered in glowing symbols of Air, Water, Earth, and Fire.
+
+As soon as Airo placed his hand on the gate, it slowly opened.
+
+Inside, floating lights surrounded them.
+
+An old spirit named Lumina appeared before the heroes.
+
+"You have collected three Elemental Shards," she said. "But true power is not gained through strength alone."
+
+Lumina tested each hero.
+
+Mira faced an illusion where she had to choose between saving herself or innocent villagers.
+
+Terra faced endless enemies without giving in to anger.
+
+Kael resisted the temptation of unlimited power.
+
+Finally, Airo entered the Hall of Echoes.
+
+There he met a shadow version of himself.
+
+The dark Airo claimed that peace could only exist if one person ruled the entire world.
+
+Instead of fighting, Airo refused hatred and accepted that everyone carried darkness inside their hearts.
+
+The shadow disappeared.
+
+Lumina smiled.
+
+"You understand balance."
+
+She blessed Airo with the Spirit Flame, unlocking a new ability known as the Guardian State.
+
+The heroes left the temple stronger than before, unaware that the Shadow King had already begun his final plan.
+`
+},
+
+{
+title: "Chapter 7 - Rise of the Shadow Army",
+content: `
+Darkness spread across every kingdom.
+
+Villages disappeared overnight.
+
+Mountains collapsed.
+
+The oceans became violent.
+
+Across the world, creatures made entirely of shadows emerged from giant portals in the sky.
+
+People called them the Eclipse Beasts.
+
+The Four Kingdoms united for the first time in centuries.
+
+Thousands of soldiers gathered under one banner.
+
+King Aldren of the Water Kingdom.
+
+Queen Terra of the Earth Clans.
+
+Emperor Ryujin of the Fire Empire.
+
+The Air Monks.
+
+All prepared for war.
+
+Meanwhile, Airo and his companions discovered the location of the Shadow King's fortress.
+
+It floated above the ruins of an ancient kingdom swallowed by darkness.
+
+Before leaving, every ruler entrusted Airo with their hopes.
+
+"If you fail," King Aldren said, "the world will fall forever."
+
+The final journey had begun.
+`
+},
+
+{
+title: "Chapter 8 - Battle of the Four Kingdoms",
+content: `
+The armies marched toward the Shadow Fortress.
+
+Thousands of warriors fought beneath skies covered by black clouds.
+
+Fire soldiers battled giant shadow beasts.
+
+Earth warriors created walls to protect civilians.
+
+Water healers rescued the wounded.
+
+Air monks flew above the battlefield carrying supplies and messages.
+
+Airo's team fought through endless enemies.
+
+Kael defeated the Shadow General after an intense duel.
+
+Terra destroyed massive stone monsters with incredible strength.
+
+Mira used healing waters to save hundreds of soldiers.
+
+Finally, the heroes reached the gates of the fortress.
+
+The Shadow King waited inside.
+
+He welcomed them with a smile.
+
+"You have done well collecting the Elemental Shards."
+
+Only then did Airo realize the terrible truth.
+
+The Shadow King wanted the heroes to gather the shards for him.
+
+The real battle was about to begin.
+`
+},
+
+{
+title: "Chapter 9 - The Guardian Awakens",
+content: `
+The Shadow King combined dark energy with the stolen Fire Shard.
+
+The fortress shook violently.
+
+A giant creature known as the Eclipse Titan emerged from beneath the earth.
+
+Entire mountains collapsed.
+
+The heroes fought with everything they had.
+
+Still, nothing could stop the monster.
+
+As Airo collapsed from exhaustion, Lumina's voice echoed within him.
+
+"The Guardian State exists not to destroy... but to protect."
+
+The four Elemental Shards floated into the air.
+
+Wind.
+
+Water.
+
+Earth.
+
+Fire.
+
+The powers united.
+
+Blue light surrounded Airo as glowing symbols covered his entire body.
+
+He had become the true Guardian.
+
+With one powerful strike, he shattered the Eclipse Titan.
+
+Hope returned to the battlefield.
+
+The Shadow King finally stepped forward.
+
+Their final duel had begun.
+`
+},
+
+{
+title: "Chapter 10 - Dawn of a New Era",
+content: `
+The final battle lasted until sunrise.
+
+The Shadow King unleashed waves of darkness powerful enough to destroy entire cities.
+
+Airo answered with the combined strength of the four elements.
+
+Fire burned away corruption.
+
+Water restored life.
+
+Earth protected the innocent.
+
+Air carried hope across the battlefield.
+
+Every kingdom watched as the two greatest powers collided.
+
+Finally, Airo remembered Lumina's final lesson.
+
+Darkness could never truly disappear.
+
+It must exist alongside light in perfect balance.
+
+Instead of destroying the Shadow King, Airo purified his corrupted heart using the Spirit Flame.
+
+The darkness vanished.
+
+Peace returned to the world.
+
+The Four Kingdoms signed a new alliance and promised never to wage war against one another again.
+
+Kael became the new Fire Emperor.
+
+Terra rebuilt the Earth Kingdom.
+
+Mira founded the Academy of Spirit Healing.
+
+Airo returned to the Sky Islands, not as a warrior, but as the Guardian of Balance.
+
+Although peace had returned, the Spirit Compass quietly glowed once more.
+
+Far beyond the known world, another adventure was waiting.
+
+The End.
+`
+}
+];
+
+const list = document.getElementById("list");
+const content = document.getElementById("content");
+
+let current = 0;
+
+// ==========================
+// BUILD CHAPTER LIST
+// ==========================
+
+chapters.forEach((chapter,index)=>{
+
+    const btn=document.createElement("button");
+
+    btn.innerHTML=chapter.title;
+
+    btn.onclick=function(){
+
+        load(index);
+
+    };
+
+    list.appendChild(btn);
+
+});
+
+// ==========================
+// LOAD CHAPTER
+// ==========================
+
+function load(index){
+
+    current=index;
+
+    localStorage.setItem("lastNovel","AVATAR: The Last Air Bender");
+    localStorage.setItem("lastChapter",index);
+    localStorage.setItem("lastCover","images/27.jpg");
+
+    content.innerHTML=`
+        <h2>${chapters[index].title}</h2>
+        <br>
+        <p style="white-space:pre-line;line-height:2;">
+            ${chapters[index].content}
+        </p>
+    `;
+
+}
+
+// ==========================
+// NEXT
+// ==========================
+
+function next(){
+
+    if(current<chapters.length-1){
+
+        load(current+1);
+
+    }else{
+
+        alert("🎉 End of Story");
+
+    }
+
+}
+
+// ==========================
+// PREVIOUS
+// ==========================
+
+function prev(){
+
+    if(current>0){
+
+        load(current-1);
+
+    }
+
+}
+
+// ==========================
+// AUTO LOAD LAST CHAPTER
+// ==========================
+
+window.onload=function(){
+
+    const saved=localStorage.getItem("lastChapter");
+
+    if(saved!==null){
+
+        load(parseInt(saved));
+
+    }else{
+
+        load(0);
+
+    }
+
+};
+
+</script>
+
+</body>
+</html>

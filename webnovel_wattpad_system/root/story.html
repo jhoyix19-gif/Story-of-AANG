@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AVATAR: The Last Air Bender</title>
+<link rel="stylesheet" href="css/story.css">
+
+</head>
+
+<body>
+    <div class="hero-banner">
+
+        <div class="hero-bg"></div>
+    
+        <div class="hero-content">
+    
+            <img src="images/27.jpg" class="hero-cover" id="cover">
+    
+            <h1>AVATAR: The Last Air Bender</h1>
+    
+            <p>
+                "Water. Earth. Fire. Air.
+                Long ago
+            </p>
+    
+        </div>
+    
+    </div>
+<div class="reader">
+
+<div class="sidebar">
+<h3>📚 Chapters</h3>
+<div id="list"></div>
+</div>
+
+<div class="main">
+
+<a class="back" href="library.html">⬅ Back to Library</a>
+
+<h1>📖 AVATAR: The Last Air Bender</h1>
+
+<div class="chapter-box" id="content"></div>
+
+<div>
+<button onclick="prev()">⬅ Prev</button>
+<button onclick="next()">Next ➡</button>
+</div>
+
+</div>
+</div>
+
+<script>
+
+/* FULL NOVEL CHAPTERS (EXPANDED STORY STYLE) */
+const chapters = [
+
+
+{
+title:"Chapter 1 - The Lost Airbender",
+content:`
+In the peaceful Sky Islands, a young boy named Airo lived among the last Air Walkers. He spent his days gliding through clouds and practicing wind techniques. Unlike the others, Airo dreamed of exploring the world below.
+
+One evening, a strange red comet crossed the sky. The elders became worried and ordered everyone indoors. Airo secretly followed the comet's trail and discovered an ancient temple hidden among the cliffs.
+
+Inside the temple was a glowing sphere surrounded by symbols of Water, Earth, Fire, and Air. When Airo touched it, a burst of energy filled the room.
+
+A mysterious voice echoed.
+
+"The balance of the world is fading. The Four Spirits have chosen you."
+
+Airo collapsed as glowing marks appeared on his arms. His journey had begun.
+`
+},
+
+{
+title:"Chapter 2 - The Four Spirits",
+content:`
+Airo awakened in the temple surrounded by floating lights.
+
+Before him appeared four spirit guardians.
+
+The Water Spirit represented wisdom.
+
+The Earth Spirit represented strength.
+
+The Fire Spirit represented courage.
+
+The Air Spirit represented freedom.
+
+They explained that darkness was spreading across the world. A forgotten ruler known as the Shadow Emperor sought to control all elemental power.
+
+To stop him, Airo must master the four elements and unite the nations.
+
+Though afraid, Airo accepted the responsibility.
+
+The spirits gave him a compass that pointed toward his destiny.
+`
+},
+
+{
+title:"Chapter 3 - Journey Begins",
+content:`
+Airo left the Sky Islands and traveled toward the Water Kingdom.
+
+Along the way he met Mira, a talented water healer.
+
+At first she doubted Airo's claims of being chosen by the spirits.
+
+When bandits attacked their village, Airo created a powerful tornado to protect everyone.
+
+The villagers cheered.
+
+Mira finally believed him and agreed to join his journey.
+
+Together they sailed across the sea toward the Northern Kingdom.
+`
+},
+
+{
+title:"Chapter 4 - The Frozen Palace",
+content:`
+The Northern Kingdom was covered in ice.
+
+Rumors spoke of an ancient palace buried beneath a glacier.
+
+Airo and Mira entered the frozen ruins.
+
+Inside they discovered a crystal containing memories of past guardians.
+
+The crystal revealed the truth.
+
+The Shadow Emperor was once a hero who became consumed by power.
+
+His return threatened every nation.
+
+Airo realized the battle ahead would be far greater than he imagined.
+`
+},
+
+{
+title:"Chapter 5 - Fire of Destiny",
+content:`
+The next destination was the Fire Empire.
+
+There Airo met Prince Kael, heir to the throne.
+
+Kael was known for his incredible fire techniques.
+
+At first he challenged Airo to a duel.
+
+The battle was fierce.
+
+Wind and fire collided across the arena.
+
+In the end neither won.
+
+Instead they became friends.
+
+Kael revealed that rebels within the empire secretly served the Shadow Emperor.
+`
+},
+
+{
+title:"Chapter 6 - Earth Guardian",
+content:`
+Deep inside the Stone Mountains lived Terra, the strongest earth warrior alive.
+
+She refused to help strangers.
+
+To earn her trust, Airo completed three impossible trials.
+
+He climbed a mountain without bending.
+
+Crossed a canyon without fear.
+
+And defended a village from monsters.
+
+Impressed, Terra joined the team.
+
+The four heroes continued their quest together.
+`
+},
+
+{
+title:"Chapter 7 - Rise of Darkness",
+content:`
+The Shadow Emperor finally revealed himself.
+
+Dark storms covered entire cities.
+
+Creatures made of shadow appeared across the nations.
+
+Fear spread everywhere.
+
+The heroes raced from village to village helping survivors.
+
+But they knew they could not keep running forever.
+
+Soon they would have to face the source of the darkness.
+`
+},
+
+{
+title:"Chapter 8 - Temple of Light",
+content:`
+The Spirit Compass guided the group to a hidden temple.
+
+Within the temple rested the Crown of Light.
+
+Legend said it could amplify the power of the chosen guardian.
+
+However, countless traps protected it.
+
+After many challenges, Airo claimed the crown.
+
+Its power awakened a new connection with the four elements.
+`
+},
+
+{
+title:"Chapter 9 - Battle of the Four Nations",
+content:`
+War erupted.
+
+Armies from every nation united against the Shadow Emperor.
+
+The battlefield stretched across mountains and oceans.
+
+Airo fought beside thousands of warriors.
+
+The clash shook the world.
+
+Yet the Shadow Emperor remained unstoppable.
+
+The final battle was approaching.
+`
+},
+
+{
+title:"Chapter 10 - The Final Avatar",
+content:`
+At the center of the Dark Citadel, Airo confronted the Shadow Emperor.
+
+The villain unleashed endless darkness.
+
+Airo answered with the power of all four elements.
+
+Wind, water, earth, and fire surrounded him.
+
+The spirits joined their strength with his.
+
+A massive beam of light shattered the darkness.
+
+The Shadow Emperor was defeated.
+
+Balance returned to the world.
+
+Peace finally came to the nations.
+
+Airo became known as the Guardian of the Four Spirits.
+
+His legend would be remembered forever.
+`
+}
+
+];
+
+
+
+/* BUILD LIST */
+let list = document.getElementById("list");
+
+chapters.forEach((c,i)=>{
+
+    let b = document.createElement("button");
+
+    b.innerText = c.title;
+
+    b.onclick = ()=>load(i);
+
+    list.appendChild(b);
+
+});
+let current = 0;
+
+function load(i){
+
+    if(i >= 4){
+        alert("🔒 Locked chapter!");
+        return;
+    }
+
+    current = i;
+    document.getElementById("content").innerText = chapters[i];
+}
+
+function next(){
+    if(current < 10) load(current+1);
+}
+
+function prev(){
+    if(current > 0) load(current-1);
+}
+
+window.onload = ()=>load(0);
+
+function load(i){
+
+if(i >= 10){
+    alert("🔒 Locked Chapter!");
+    return;
+}
+
+current = i;
+
+localStorage.setItem(
+    "lastNovel",
+    "AVATAR: The Last Air Bender"
+);
+
+localStorage.setItem(
+    "lastChapter",
+    i + 1
+);
+
+localStorage.setItem(
+    "lastCover",
+    "images/27.jpg"
+);
+
+document.getElementById("content").innerHTML = `
+    <h2>${chapters[i].title}</h2>
+    <br>
+    <p>${chapters[i].content}</p>
+`;
+}
+</script>
+
+</body>
+</html>
